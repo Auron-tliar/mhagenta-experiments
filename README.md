@@ -13,9 +13,9 @@ bundles. Collected results and recordings are distributed separately in the
 [MHAgentA experimental validation results 1.0 on Zenodo](https://zenodo.org/records/22912504),
 DOI: [10.5281/zenodo.22912504](https://doi.org/10.5281/zenodo.22912504).
 
-This data release is paired with **this frozen `mhagenta-experiments` source
-snapshot**, whose workspace version is **0.1.0**, using MHAgentA **1.4.12**.
-Use this snapshot's experiment implementations, fixed task definitions,
+This data release is paired with **`mhagenta-experiments` release 1.0**
+(workspace and package version **1.0.0**), using MHAgentA **1.4.12**.
+Use this release's experiment implementations, fixed task definitions,
 bundled policies and result processors with results version 1.0.
 
 ### Download and extraction
@@ -212,6 +212,9 @@ Runtime assets stay beside their consumers: PDDL domains, fixed task and
 schedule JSON, Crafter textures, selected policy weights, perception templates
 and checksum-bound qualification evidence. The detailed assessment files in
 the BW policy-family bundle are required by its runtime validator.
+
+Environment-version labels inside frozen policy and perception manifests
+record the versions used during preparation and are retained as provenance.
 
 Git excludes collected results, run logs, recordings, archived checkpoints,
 temporary experiments, development plans, implementation reviews, coding-agent

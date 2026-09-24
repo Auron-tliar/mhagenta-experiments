@@ -1,6 +1,6 @@
 [project]
 name = "mha-exp-level1"
-version = "0.1.0"
+version = "1.0.0"
 requires-python = ">=3.12"
 dependencies = [
     "mhagenta==1.4.12",

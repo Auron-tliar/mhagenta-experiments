@@ -862,7 +862,7 @@ wheels = [
 
 [[package]]
 name = "mha-env-blocksworld"
-version = "0.1.0"
+version = "1.0.0"
 source = { editable = "packages/mha_env_blocksworld" }
 dependencies = [
     { name = "gymnasium" },
@@ -883,7 +883,7 @@ requires-dist = [
 
 [[package]]
 name = "mha-env-crafter"
-version = "0.1.0"
+version = "1.0.0"
 source = { editable = "packages/mha_env_crafter" }
 dependencies = [
     { name = "imageio" },
@@ -906,7 +906,7 @@ requires-dist = [
 
 [[package]]
 name = "mha-exp-cli"
-version = "0.1.0"
+version = "1.0.0"
 source = { editable = "packages/mha_exp_cli" }
 dependencies = [
     { name = "mha-exp-common" },
@@ -917,12 +917,12 @@ requires-dist = [{ name = "mha-exp-common", editable = "packages/mha_exp_common"
 
 [[package]]
 name = "mha-exp-common"
-version = "0.1.0"
+version = "1.0.0"
 source = { editable = "packages/mha_exp_common" }
 
 [[package]]
 name = "mha-exp-level1"
-version = "0.1.0"
+version = "1.0.0"
 source = { editable = "packages/mha_exp_level1" }
 dependencies = [
     { name = "matplotlib" },
@@ -943,7 +943,7 @@ requires-dist = [
 
 [[package]]
 name = "mha-exp-level2-bw"
-version = "0.1.0"
+version = "1.0.0"
 source = { editable = "packages/mha_exp_level2_bw" }
 dependencies = [
     { name = "mha-env-blocksworld" },
@@ -981,7 +981,7 @@ provides-extras = ["playback", "policies"]
 
 [[package]]
 name = "mha-exp-level2-cr"
-version = "0.1.0"
+version = "1.0.0"
 source = { editable = "packages/mha_exp_level2_cr" }
 dependencies = [
     { name = "mha-env-crafter" },
@@ -1052,7 +1052,7 @@ requires-dist = [
 
 [[package]]
 name = "mhagenta-experiments-workspace"
-version = "0.1.0"
+version = "1.0.0"
 source = { virtual = "." }
 
 [package.dev-dependencies]
