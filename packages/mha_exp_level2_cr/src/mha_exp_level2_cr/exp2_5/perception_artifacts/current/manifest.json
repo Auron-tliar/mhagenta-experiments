@@ -1,0 +1,66 @@
+{
+  "artifact_id": "current",
+  "environment": {
+    "area": [
+      64,
+      64
+    ],
+    "daylight_effects": false,
+    "episode_length": 1000,
+    "no_mobs": true,
+    "package": "mha-env-crafter",
+    "render_size": [
+      64,
+      64
+    ],
+    "sleep_effects": false,
+    "symbolic": false,
+    "version": "0.1.0",
+    "view": [
+      9,
+      9
+    ]
+  },
+  "format_version": 3,
+  "geometry": {
+    "cell_size": [
+      7,
+      7
+    ],
+    "inventory_grid": [
+      9,
+      2
+    ],
+    "inventory_origin": [
+      49,
+      0
+    ],
+    "local_grid": [
+      9,
+      7
+    ],
+    "local_origin": [
+      0,
+      0
+    ],
+    "player_crop": [
+      21,
+      28,
+      7,
+      7
+    ]
+  },
+  "input": {
+    "observation_dtype": "uint8",
+    "observation_shape": [
+      64,
+      64,
+      3
+    ]
+  },
+  "templates": {
+    "filename": "templates.npz",
+    "sha256": "2744f3274ce05c125957bb04eaf680e5e6770b117c68b44bcd286569c5be976a"
+  },
+  "variant_id": "deterministic-renderer-template-v2"
+}

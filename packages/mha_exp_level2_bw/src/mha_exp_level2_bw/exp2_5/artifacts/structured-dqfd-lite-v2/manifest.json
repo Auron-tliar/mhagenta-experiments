@@ -1,0 +1,52 @@
+{
+  "format_version": 4,
+  "architecture": "transfer_conditioned_structured_mlp_v2",
+  "frozen": true,
+  "checkpoint": {
+    "filename": "transfer-policy.pt",
+    "sha256": "9bb13ee279737949c002f71b3e1ebc9c89c4a6850f9b76eed015b8e04db9a65a",
+    "observation_shape": [10, 5, 8],
+    "input_shape": [12, 5, 8],
+    "actions": 4
+  },
+  "training": {
+    "method": "structured-ddqn-per-n3-dqfd-lite",
+    "seed": 2505,
+    "elapsed_seconds": 2179.5326499000075,
+    "search_environment_steps": 250000,
+    "search_optimizer_steps": 250000,
+    "selected_environment_step": 10000,
+    "selected_optimizer_steps": 9999,
+    "hyperparameters": {
+      "online_environment_steps": 250000,
+      "demonstration_environment_steps": 2000,
+      "replay_capacity": 52000,
+      "protected_demonstrations": 2000,
+      "batch_size": 128,
+      "discount": 0.99,
+      "learning_rate": 0.0001,
+      "gradient_clip": 10.0,
+      "target_sync_steps": 500,
+      "double_dqn": true,
+      "prioritized_replay": true,
+      "priority_alpha": 0.6,
+      "priority_beta_start": 0.4,
+      "n_step_return": 3,
+      "large_margin": 0.8,
+      "large_margin_weight": 1.0,
+      "demonstration_priority_bonus": 0.1,
+      "behavior_cloning_pretraining": false
+    }
+  },
+  "qualification": {
+    "protocol": {
+      "id": "exp2-5-bw-certification-v1",
+      "sha256": "4e5ada2d56477fa55367b747610cdc738719b67561c7e56d9f7acadd65354bdd"
+    },
+    "transfers_per_sequence": 10,
+    "held_out": {"cases": 100, "successes": 100},
+    "integration": {"cases": 1, "successes": 1},
+    "sequential": {"cases": 20, "successes": 20},
+    "regressions": {"cases": 1, "successes": 1}
+  }
+}

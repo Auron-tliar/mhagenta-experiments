@@ -1,0 +1,7 @@
+{
+  "duration_seconds": 600,
+  "episode_limit": 1,
+  "policy": "transfer",
+  "matched_2_4": true,
+  "policy_family": "structured-dqfd-family-20260920-v1"
+}

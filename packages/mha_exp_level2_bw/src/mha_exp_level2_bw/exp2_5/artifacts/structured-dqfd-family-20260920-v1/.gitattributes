@@ -1,0 +1,2 @@
+# Qualification evidence is checksum-bound; preserve exact bytes on every host.
+** -text

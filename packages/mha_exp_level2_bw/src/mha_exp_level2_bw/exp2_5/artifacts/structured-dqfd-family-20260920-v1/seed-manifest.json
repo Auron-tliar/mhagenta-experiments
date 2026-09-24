@@ -1,0 +1,169 @@
+{
+  "family": "structured-dqfd-family-20260920-v1",
+  "case_identity": [
+    "table_len",
+    "num_blocks",
+    "seed"
+  ],
+  "allocations": {
+    "5x8": {
+      "table_len": 5,
+      "num_blocks": 8,
+      "training": [
+        7000000,
+        7499999
+      ],
+      "demonstrations": [
+        8000000,
+        8099999
+      ],
+      "selection": [
+        9000000,
+        9000599
+      ],
+      "revealed_development": [
+        10000000,
+        10001099
+      ],
+      "final": [
+        11000000,
+        11001099
+      ],
+      "final_singles": [
+        11000000,
+        11000999
+      ],
+      "final_sequences": [
+        11001000,
+        11001099
+      ]
+    },
+    "4x6": {
+      "table_len": 4,
+      "num_blocks": 6,
+      "training": [
+        7000000,
+        7499999
+      ],
+      "demonstrations": [
+        8000000,
+        8099999
+      ],
+      "selection": [
+        9000000,
+        9000599
+      ],
+      "revealed_development": [
+        10000000,
+        10001099
+      ],
+      "final": [
+        12000000,
+        12001099
+      ],
+      "final_singles": [
+        12000000,
+        12000999
+      ],
+      "final_sequences": [
+        12001000,
+        12001099
+      ]
+    },
+    "7x12": {
+      "table_len": 7,
+      "num_blocks": 12,
+      "training": [
+        7000000,
+        7499999
+      ],
+      "demonstrations": [
+        8000000,
+        8099999
+      ],
+      "selection": [
+        9000000,
+        9000599
+      ],
+      "revealed_development": [
+        10000000,
+        10001099
+      ],
+      "final": [
+        13000000,
+        13001099
+      ],
+      "final_singles": [
+        13000000,
+        13000999
+      ],
+      "final_sequences": [
+        13001000,
+        13001099
+      ]
+    }
+  },
+  "excluded_main_seeds": [
+    23000,
+    23049
+  ],
+  "reserved_in_every_size": [
+    [
+      11000000,
+      11001099
+    ],
+    [
+      12000000,
+      12001099
+    ],
+    [
+      13000000,
+      13001099
+    ]
+  ],
+  "initialization_seeds": {
+    "5x8": 202609205,
+    "4x6": 202609204,
+    "7x12": 202609207
+  },
+  "old_regressions": "Seven revealed failures reconstructed with saved prefixes; legacy seed1000 regression and 370000/371000 certification used only as development.",
+  "demonstration_rule": "Expert actions on evolving worlds; no main or final cases, no revealed regression states used as demonstrations.",
+  "selection_rule": "Lexicographic exact-regression passes, successful requested transfers, complete sequences, negative action count; ties retain earlier weights.",
+  "selection_suite": {
+    "singles": 500,
+    "sequences": 100,
+    "sequence_length": 10
+  },
+  "early_stop": "Three consecutive perfect expanded selection suites and all exact regressions, after20000 scratch or6000 child environment actions; final gate still required.",
+  "final_gate": {
+    "single_successes": 990,
+    "sequence_successes": 95,
+    "successful_transfers": 1980,
+    "singles": 1000,
+    "sequences": 100,
+    "requested_transfers": 2000
+  },
+  "reuse_rule": "A failed final cohort influencing refinement is retired into development; a new disjoint block must be declared before the next assessment.",
+  "main_recovery": "Preserve completed valid runs; repair technical faults and resume only interrupted/failed and remaining IDs. Retain scientific failures.",
+  "baseline_hashes": {
+    "packages/mha_exp_level2_bw/src/mha_exp_level2_bw/exp2_5/artifacts/structured-dqfd-lite-v2/manifest.json": "4d2fbdef4586679ef0549da6ce502327b922f17026fac2006bd9ec1b493895bb",
+    "packages/mha_exp_level2_bw/src/mha_exp_level2_bw/exp2_5/artifacts/structured-dqfd-lite-v2/transfer-policy.pt": "9bb13ee279737949c002f71b3e1ebc9c89c4a6850f9b76eed015b8e04db9a65a",
+    "packages/mha_exp_level2_bw/src/mha_exp_level2_bw/exp2_5/artifacts/structured-dqfd-resized-v1/4x6/manifest.json": "8b65d81007f587b1f0f2f8d251c16a73a1befeef40aaf0d9f1d11fd0b1e56df5",
+    "packages/mha_exp_level2_bw/src/mha_exp_level2_bw/exp2_5/artifacts/structured-dqfd-resized-v1/4x6/transfer-policy.pt": "e564efce25c6b27e91c277774dec654a0e1a29525e5ad0e95f493a604b13bc47",
+    "packages/mha_exp_level2_bw/src/mha_exp_level2_bw/exp2_5/artifacts/structured-dqfd-resized-v1/7x12/manifest.json": "351d5e3992370f6b502c9258ea50da367d7d7dd550bd16468244a3dd6340be09",
+    "packages/mha_exp_level2_bw/src/mha_exp_level2_bw/exp2_5/artifacts/structured-dqfd-resized-v1/7x12/transfer-policy.pt": "087c2e0d0ad5a4f02ad674ee8cb9e265c5a8878109737ee76ff3af2348c85f0b"
+  },
+  "revealed_evidence_hashes": {
+    "artifact-hashes-after.json": "0a02ff2cab59852f55cfe4cbd9d88225f825eb4a3dd1b8a29480a2840f45e53a",
+    "artifact-hashes-before.json": "0a02ff2cab59852f55cfe4cbd9d88225f825eb4a3dd1b8a29480a2840f45e53a",
+    "assessment.json": "490199ab9063224d126ced11bfdce2a59668954207a205838645c32f0eda2e7e",
+    "audit.json": "c62dd295966643df82cbde701e407a0764e6489f42823dbdca28aeeecea36221",
+    "execution.log": "0a831c94cb24309ea41699a0f6c2b99d08d14ca5ebf5be0d7b411e0655525797",
+    "failure-diagnostics.json": "8345b722c3af68b22cd9cefa19066607498305471f364b837664d85dd2800643",
+    "protocol.json": "dff329b129d0ce38c29928154fd06cee048b4d52be28a61073b31ae62b066504",
+    "README.md": "651126f96183193258b512417ad09433b5e3c4d525ef5ab1fab96a6f6735fa26",
+    "run_assessment.py": "bdec4035994799a994ab7aeea2316ca13cff128feb3a84c53ea368038405efbf",
+    "summary.json": "7a4a0bf84eb4f1471f01505167ed150ebaf158bce0337a12baa40fbdceff98dc",
+    "transfers.csv": "5165ff4338864b1e1d413bfac73acaf3a1284442b4ac015f7d2d118e9d8943f8"
+  }
+}

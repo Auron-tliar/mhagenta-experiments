@@ -1,0 +1,326 @@
+{
+  "format": "resized-transfer-preparation-v1",
+  "checkpoint_file": "transfer-policy.pt",
+  "checkpoint_sha256": "087c2e0d0ad5a4f02ad674ee8cb9e265c5a8878109737ee76ff3af2348c85f0b",
+  "protocol": {
+    "format_version": "resized-transfer-v1",
+    "architecture": "transfer_conditioned_structured_mlp_v2",
+    "table_len": 7,
+    "num_blocks": 12,
+    "n_actions": 4,
+    "model_input_shape": [
+      16,
+      7,
+      12
+    ],
+    "observation_shape": [
+      14,
+      7,
+      12
+    ],
+    "provenance": {
+      "source_sha256": "9bb13ee279737949c002f71b3e1ebc9c89c4a6850f9b76eed015b8e04db9a65a",
+      "source_table_len": 5,
+      "source_num_blocks": 8,
+      "source_optimizer_steps": 9999,
+      "input_mapping": [
+        [
+          28,
+          0
+        ],
+        [
+          29,
+          1
+        ],
+        [
+          30,
+          2
+        ],
+        [
+          31,
+          3
+        ],
+        [
+          32,
+          4
+        ],
+        [
+          35,
+          5
+        ],
+        [
+          36,
+          6
+        ],
+        [
+          37,
+          7
+        ],
+        [
+          38,
+          8
+        ],
+        [
+          39,
+          9
+        ],
+        [
+          42,
+          10
+        ],
+        [
+          43,
+          11
+        ],
+        [
+          44,
+          12
+        ],
+        [
+          45,
+          13
+        ],
+        [
+          46,
+          14
+        ],
+        [
+          49,
+          15
+        ],
+        [
+          50,
+          16
+        ],
+        [
+          51,
+          17
+        ],
+        [
+          52,
+          18
+        ],
+        [
+          53,
+          19
+        ],
+        [
+          56,
+          20
+        ],
+        [
+          57,
+          21
+        ],
+        [
+          58,
+          22
+        ],
+        [
+          59,
+          23
+        ],
+        [
+          60,
+          24
+        ],
+        [
+          63,
+          25
+        ],
+        [
+          64,
+          26
+        ],
+        [
+          65,
+          27
+        ],
+        [
+          66,
+          28
+        ],
+        [
+          67,
+          29
+        ],
+        [
+          70,
+          30
+        ],
+        [
+          71,
+          31
+        ],
+        [
+          72,
+          32
+        ],
+        [
+          73,
+          33
+        ],
+        [
+          74,
+          34
+        ],
+        [
+          77,
+          35
+        ],
+        [
+          78,
+          36
+        ],
+        [
+          79,
+          37
+        ],
+        [
+          80,
+          38
+        ],
+        [
+          81,
+          39
+        ],
+        [
+          84,
+          40
+        ],
+        [
+          85,
+          41
+        ],
+        [
+          86,
+          42
+        ],
+        [
+          87,
+          43
+        ],
+        [
+          88,
+          44
+        ],
+        [
+          91,
+          45
+        ],
+        [
+          92,
+          46
+        ],
+        [
+          93,
+          47
+        ],
+        [
+          94,
+          48
+        ],
+        [
+          95,
+          49
+        ],
+        [
+          96,
+          50
+        ],
+        [
+          99,
+          51
+        ],
+        [
+          100,
+          52
+        ],
+        [
+          101,
+          53
+        ],
+        [
+          102,
+          54
+        ],
+        [
+          103,
+          55
+        ]
+      ],
+      "new_connections": "zero",
+      "stack_alignment": "bottom",
+      "column_alignment": "left",
+      "copied_input_features": 56,
+      "new_input_features": 50,
+      "trainable_parameters": 28036,
+      "frozen_parameters": 0
+    },
+    "seed": 2505,
+    "torch": "2.14.0+cu130",
+    "gpu": "NVIDIA RTX PRO 4500 Blackwell Server Edition",
+    "algorithm": "structured-ddqn-per-n3-dqfd-lite",
+    "max_environment_steps": 100000,
+    "demonstration_steps_minimum": 8000,
+    "warm_updates": 500,
+    "learning_rate": 5e-05,
+    "epsilon_start": 0.1,
+    "epsilon_end": 0.02,
+    "epsilon_decay_steps": 20000,
+    "evaluation_interval": 2000,
+    "target_sync_updates": 500,
+    "max_actions_per_transfer": 32,
+    "legal_masked_training": true,
+    "selection": {
+      "seed_start": 9000000,
+      "singles": 100,
+      "sequences": 20,
+      "length": 10
+    },
+    "assessment": {
+      "seed_start": 10000000,
+      "singles": 1000,
+      "sequences": 100,
+      "length": 10
+    },
+    "early_stop": "Two consecutive perfect selection suites after at least 5000 environment steps",
+    "acceptance": "At least 99% singles, 99% requested transfers and 95% complete sequences",
+    "training_seed_start": 7000000,
+    "demonstration_seed_start": 8000000,
+    "evaluation_tasks_excluded": "All 2-4-BW seeds 23000 through 23049",
+    "resume": "Weights-only restart into a new directory; no exact replay/optimizer resume"
+  },
+  "result": {
+    "status": "completed",
+    "accepted": true,
+    "table_len": 7,
+    "num_blocks": 12,
+    "environment_steps": 8003,
+    "optimizer_steps": 8503,
+    "selected_optimizer_steps": 6504,
+    "early_stopped": true,
+    "assessment": {
+      "single_successes": 998,
+      "singles": 1000,
+      "sequence_successes": 98,
+      "sequences": 100,
+      "successful_transfers": 1984,
+      "requested_transfers": 2000,
+      "executed_transfers": 1988,
+      "actions": 13287
+    },
+    "checkpoint_sha256": "087c2e0d0ad5a4f02ad674ee8cb9e265c5a8878109737ee76ff3af2348c85f0b",
+    "elapsed_seconds": 87.64437869998801
+  },
+  "independent_replay": {
+    "valid": true,
+    "torch": "2.13.0+cu130",
+    "device": "cpu",
+    "numeric_and_symbolic": true,
+    "actions": 13287
+  },
+  "runtime_integration": "pending",
+  "source_commit": "b168e88",
+  "evidence_archive_sha256": "0ca924f81b97da56272991580ddede1e88ac49cc491f3bcdfb150e3c63e219de"
+}

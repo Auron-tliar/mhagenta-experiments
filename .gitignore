@@ -1,0 +1,122 @@
+# Publish only the snapshot roots. Local results, archives, notes, environments,
+# editor settings and scratch directories stay on disk outside this allowlist.
+/*
+!/.gitignore
+!/README.md
+!/pyproject.toml
+!/uv.lock
+!/packages/
+!/tools/
+
+# Only implemented workspace packages belong in the snapshot.
+/packages/*
+!/packages/mha_env_blocksworld/
+!/packages/mha_env_crafter/
+!/packages/mha_exp_cli/
+!/packages/mha_exp_common/
+!/packages/mha_exp_level1/
+!/packages/mha_exp_level2_bw/
+!/packages/mha_exp_level2_cr/
+
+# Offline preparation and reusable validation/inspection tools.
+/tools/*
+!/tools/README.md
+!/tools/bw_achieve_on_preparation/
+!/tools/exp2_5_policy_preparation/
+!/tools/exp2_5_cr_preparation/
+!/tools/configs/
+!/tools/preflight_exp2_6_cr.py
+!/tools/monitor_exp2_6_cr.py
+!/tools/heartbeat_exp2_6_cr.py
+!/tools/export_exp2_6_cr_final.py
+!/tools/exp2_2_bw_remote_preflight.py
+!/tools/test_exp2_2_parallel_runtime.py
+!/tools/test_exp2_2_torch_runtime.py
+!/tools/tests/
+/tools/tests/*
+!/tools/tests/test_exp1_3_channel_validation.py
+
+# Host-specific deployment and historical policy-family campaign helpers.
+/tools/bw_achieve_on_preparation/Dockerfile.ec2
+/tools/exp2_5_policy_preparation/launch_resized.py
+/tools/exp2_5_policy_preparation/publish_family.py
+/tools/exp2_5_policy_preparation/run_family_stages.py
+/tools/exp2_5_policy_preparation/snapshot_resized.py
+/tools/exp2_5_policy_preparation/test_family.py
+/packages/mha_exp_level2_bw/tests/test_exp2_6_long_collection.py
+
+# Superseded hierarchical 2-6 prototypes; the released BW entry point delegates
+# to exp2_6_direct, and CR uses the continuing native-action online modules.
+/packages/mha_exp_level2_bw/src/mha_exp_level2_bw/exp2_6/*
+!/packages/mha_exp_level2_bw/src/mha_exp_level2_bw/exp2_6/__init__.py
+/packages/mha_exp_level2_bw/tests/test_exp2_6_learning.py
+/packages/mha_exp_level2_bw/tests/test_exp2_6_policy.py
+/packages/mha_exp_level2_bw/tests/test_exp2_6_runtime.py
+/packages/mha_exp_level2_bw/tests/test_exp2_6_tasks.py
+/packages/mha_exp_level2_bw/tests/data/exp2_6_schedule_hashes.json
+/packages/mha_exp_level2_cr/src/mha_exp_level2_cr/exp2_6/*
+!/packages/mha_exp_level2_cr/src/mha_exp_level2_cr/exp2_6/__init__.py
+!/packages/mha_exp_level2_cr/src/mha_exp_level2_cr/exp2_6/runner.py
+!/packages/mha_exp_level2_cr/src/mha_exp_level2_cr/exp2_6/online*.py
+!/packages/mha_exp_level2_cr/src/mha_exp_level2_cr/exp2_6/requirements-online.txt
+!/packages/mha_exp_level2_cr/src/mha_exp_level2_cr/exp2_6/launchers/
+/packages/mha_exp_level2_cr/tests/test_exp2_6_adaptive_neurosymbolic.py
+
+# Keep runtime weights and checksum-bound qualification evidence, but exclude
+# training histories that the runtime does not read.
+/packages/mha_exp_level2_bw/src/mha_exp_level2_bw/exp2_5/artifacts/*/*/candidate-freeze.json
+/packages/mha_exp_level2_bw/src/mha_exp_level2_bw/exp2_5/artifacts/*/*/training-protocol.json
+/packages/mha_exp_level2_bw/src/mha_exp_level2_bw/exp2_5/artifacts/*/*/training-report.json
+/packages/mha_exp_level2_bw/src/mha_exp_level2_bw/exp2_5/artifacts/*/*/selection-history.json
+
+# Development instructions, plans and reviews remain local. Retained READMEs
+# describe usage; the vendored Crafter README and LICENSE remain intact.
+*.md
+!README.md
+AGENTS.md
+SKILL.md
+.agents/
+.codex/
+
+# Generated files, including those created inside otherwise published folders.
+__pycache__/
+*.py[cod]
+*$py.class
+.venv*/
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage*
+coverage.xml
+htmlcov/
+.ipynb_checkpoints/
+.ipython/
+.idea/
+.vscode/
+.env
+.env.*
+!.env.example
+*.swp
+*.swo
+*.log
+*.tmp
+*.bak
+.tmp*/
+tmp*/
+temp/
+recordings/
+out/
+save/
+outputs/
+results/
+.DS_Store
+Thumbs.db
+desktop.ini

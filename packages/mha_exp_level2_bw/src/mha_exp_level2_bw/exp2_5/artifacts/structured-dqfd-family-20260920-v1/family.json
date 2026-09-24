@@ -1,0 +1,28 @@
+{
+  "format": "transfer-family-v1",
+  "family": "structured-dqfd-family-20260920-v1",
+  "policies": {
+    "5x8": {
+      "checkpoint_sha256": "44200f9ce1f90b88a2e044e6a5d330dc0d9bd60a14d553f2962020217090d8c6",
+      "qualification_sha256": "27b8589d32f85ca282d670c1562061c9c60de94f58ed509448d163b7f974908d",
+      "parent_sha256": null,
+      "selected_optimizer_steps": 45036,
+      "training_evidence": "results/2-5-bw-policy-family-20260920/5x8-attempt-2"
+    },
+    "4x6": {
+      "checkpoint_sha256": "62902b8b8abdc3c405d66bf7c844a06fd9b5de27e762cf499b312d433dfed628",
+      "qualification_sha256": "5265164dadcb85dc5867d633c1da5d001190ced792aade304393c90679c391cd",
+      "parent_sha256": "44200f9ce1f90b88a2e044e6a5d330dc0d9bd60a14d553f2962020217090d8c6",
+      "selected_optimizer_steps": 0,
+      "training_evidence": "results/2-5-bw-policy-family-20260920/4x6-attempt-1"
+    },
+    "7x12": {
+      "checkpoint_sha256": "7fd335ff2b7ce76d9b8824fc3ae8e41ac7ea289736029298214965c8ee6fb070",
+      "qualification_sha256": "da0f7169616459caf56e37aa2cbe9db26d627735bc6f5f32fb9bb1d390cb649a",
+      "parent_sha256": "44200f9ce1f90b88a2e044e6a5d330dc0d9bd60a14d553f2962020217090d8c6",
+      "selected_optimizer_steps": 6509,
+      "training_evidence": "results/2-5-bw-policy-family-20260920/7x12-attempt-1"
+    }
+  },
+  "seed_manifest_sha256": "f68a9683a934abe14241dfbb52fa75d7d39d2540ec83256288c1f9412a6ff764"
+}

@@ -1,0 +1,29 @@
+{
+  "accepted": true,
+  "stage": "final",
+  "size": "7x12",
+  "table_len": 7,
+  "num_blocks": 12,
+  "checkpoint_sha256": "7fd335ff2b7ce76d9b8824fc3ae8e41ac7ea289736029298214965c8ee6fb070",
+  "parent_sha256": "44200f9ce1f90b88a2e044e6a5d330dc0d9bd60a14d553f2962020217090d8c6",
+  "initialization": "semantic-resize",
+  "selected_optimizer_steps": 6509,
+  "training_optimizer_steps": 20501,
+  "assessment": {
+    "single_successes": 999,
+    "singles": 1000,
+    "sequence_successes": 97,
+    "sequences": 100,
+    "successful_transfers": 1985,
+    "requested_transfers": 2000,
+    "executed_transfers": 1989,
+    "actions": 13227
+  },
+  "cpu_audit_valid": true,
+  "development_passed": true,
+  "final_seed_start": 13000000,
+  "final_assessment_performed": true,
+  "training_report_sha256": "f9961efdd332d54aad9c88ad6538303fb762472c3a45b18dcd531f5686c38e19",
+  "assessment_sha256": "7bbf3ee2176d653a9ea789dfb401ec005bfc19a0cbe88a1d27dc370b900ec9da",
+  "cpu_audit_sha256": "a979d03be7b8b75c79f1861caaa17b785b2b6a0ea731af39fe301812c244b94e"
+}

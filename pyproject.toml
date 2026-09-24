@@ -1,0 +1,45 @@
+[project]
+name = "mhagenta-experiments-workspace"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=9,<10",
+]
+exp2-2 = [
+    "torch==2.14.0",
+    "pytest>=9,<10",
+]
+
+[tool.uv]
+package = false
+# Keep the 2-2 runtime separate from policy preparation still using Torch 2.13.
+conflicts = [
+    [{ group = "exp2-2" }, { package = "mha-exp-level2-bw", extra = "playback" }],
+    [{ group = "exp2-2" }, { package = "mha-exp-level2-bw", extra = "policies" }],
+    [{ group = "exp2-2" }, { package = "mha-exp-level2-cr", extra = "playback" }],
+    [{ group = "exp2-2" }, { package = "mha-exp-level2-cr", extra = "policies" }],
+]
+
+[tool.uv.workspace]
+members = [
+    "packages/mha_env_blocksworld",
+    "packages/mha_env_crafter",
+    "packages/mha_exp_cli",
+    "packages/mha_exp_common",
+    "packages/mha_exp_level1",
+    "packages/mha_exp_level2_bw",
+    "packages/mha_exp_level2_cr",
+]
+
+[tool.uv.sources]
+mhagenta = { path = "../mhagenta", editable = true }
+"mha-env-blocksworld" = { workspace = true }
+"mha-env-crafter" = { workspace = true }
+"mha-exp-cli" = { workspace = true }
+"mha-exp-common" = { workspace = true }
+"mha-exp-level1" = { workspace = true }
+"mha-exp-level2-bw" = { workspace = true }
+"mha-exp-level2-cr" = { workspace = true }

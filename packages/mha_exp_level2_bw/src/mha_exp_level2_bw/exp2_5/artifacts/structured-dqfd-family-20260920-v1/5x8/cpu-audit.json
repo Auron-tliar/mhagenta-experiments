@@ -1,0 +1,18 @@
+{
+  "valid": true,
+  "device": "cpu",
+  "torch_threads": 1,
+  "numeric_symbolic_states_agree_after_every_action": true,
+  "greedy_actions_reproduced": true,
+  "tensor_sha256": "3c7cbe2dcf18e41225671b0b50958885a7024a47503908298e10ee4eb731a8ca",
+  "single_successes": 1000,
+  "singles": 1000,
+  "sequence_successes": 100,
+  "sequences": 100,
+  "successful_transfers": 2000,
+  "requested_transfers": 2000,
+  "executed_transfers": 2000,
+  "actions": 10899,
+  "torch": "2.13.0+cu130",
+  "checkpoint_sha256": "44200f9ce1f90b88a2e044e6a5d330dc0d9bd60a14d553f2962020217090d8c6"
+}

@@ -1,0 +1,25 @@
+{
+  "source": "agents/exp2_cr_5_current_policies_retry",
+  "seed": 820001,
+  "observation_sha256": [
+    "65d9c2a662277fbb061e1a30f71ede8bd05d1f3f990183005fcf665c0cd1be60",
+    "52e8ee5f3b456e44e5ec3caa8af595df98a97be178740c1daeb8040171bf78bb",
+    "7907b1874cdaaf72b6cfbda2b1c8d77c3029f16663e9db2095449b6e042809f2",
+    "96606f48db129cc068949ef91546920453b532b486a8e212ba939734b6fd731b",
+    "9a15e0e6ac03204a7ec6d09143191b80eef716a51c909d518135b59d7982ac32",
+    "236e32598d64e0bbf9520e18d998666020a1cf1bea6738be4d1db065791398ca"
+  ],
+  "modes": ["fallback", "goal", "goal", "goal", "goal"],
+  "policies": ["explore", "get_wood", "get_wood", "get_wood", "get_wood"],
+  "actions": [2, 2, 2, 4, 5],
+  "replayed_actions": [2, 2, 2, 4, 5],
+  "maximum_q_value_delta": 0.0000002384185791015625,
+  "target_cell": [3, 1],
+  "baseline_revision": 1,
+  "baseline_wood": 0,
+  "completion_revision": 6,
+  "final_wood": 1,
+  "illegal_actions": 0,
+  "lethal_movements": 0,
+  "errors": 0
+}

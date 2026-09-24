@@ -1,0 +1,108 @@
+{
+  "artifact_id": "current",
+  "environment": {
+    "area": [
+      64,
+      64
+    ],
+    "daylight_effects": false,
+    "episode_length": 1000,
+    "no_mobs": true,
+    "package": "mha-env-crafter",
+    "render_size": [
+      64,
+      64
+    ],
+    "sleep_effects": false,
+    "symbolic": false,
+    "version": "0.1.0",
+    "view": [
+      9,
+      9
+    ]
+  },
+  "format_version": 5,
+  "input": {
+    "context_encoding": "relative_xy_divided_by_63_persistent_goal_v3",
+    "context_size": 2,
+    "image_preprocessing": "uint8_nhwc_to_float32_nchw_divided_by_255_v1",
+    "max_relative_target_delta": 63,
+    "model_image_shape": [
+      3,
+      64,
+      64
+    ],
+    "observation_dtype": "uint8",
+    "observation_shape": [
+      64,
+      64,
+      3
+    ],
+    "policy_actions": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "policy_masks": {
+      "eat_cow": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "eat_target": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explore": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "get_resource": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "navigate_to": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "policies": {
+    "eat_cow": {
+      "filename": "eat-cow-policy.pt",
+      "sha256": "7ab96a8c0bcfaad81c333b7dca9e3a9b1d461428ecbdea2593ebcb0e39dca614",
+      "context_encoding": "relative_xy_divided_by_63_visible_cow_or_discovery_v1"
+    },
+    "eat_target": {
+      "filename": "eat-target-policy.pt",
+      "sha256": "5e58f080354a993fdbc4aaee779042ce72b34fb1d37c35c4a24ec31b6958c965"
+    },
+    "explore": {
+      "filename": "explore-policy.pt",
+      "sha256": "703c8bc7b8cde753cc803f54ff9ba193406957871f99aef9128f10212170a683"
+    },
+    "get_resource": {
+      "filename": "get-resource-policy.pt",
+      "sha256": "d2ff9b92802ac2b27db5c046a9ebf80bd0748ba4b86e9c465f90e4cd44b5cae4"
+    },
+    "navigate_to": {
+      "filename": "navigate-to-policy.pt",
+      "sha256": "f44fd2d91437975d2979c25ac3df186061f93da1b108186dbf4c07dd68f2e00d"
+    }
+  }
+}

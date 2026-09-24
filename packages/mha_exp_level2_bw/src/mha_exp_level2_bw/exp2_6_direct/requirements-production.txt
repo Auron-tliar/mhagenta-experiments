@@ -1,0 +1,4 @@
+torch==2.14.0
+numpy~=2.4.4
+unified-planning[lpg,enhsp]~=1.3.0
+setuptools<81

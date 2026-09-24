@@ -1,0 +1,250 @@
+{
+  "format": "resized-transfer-preparation-v1",
+  "checkpoint_file": "transfer-policy.pt",
+  "checkpoint_sha256": "e564efce25c6b27e91c277774dec654a0e1a29525e5ad0e95f493a604b13bc47",
+  "protocol": {
+    "format_version": "resized-transfer-v1",
+    "architecture": "transfer_conditioned_structured_mlp_v2",
+    "table_len": 4,
+    "num_blocks": 6,
+    "n_actions": 4,
+    "model_input_shape": [
+      10,
+      4,
+      6
+    ],
+    "observation_shape": [
+      8,
+      4,
+      6
+    ],
+    "provenance": {
+      "source_sha256": "9bb13ee279737949c002f71b3e1ebc9c89c4a6850f9b76eed015b8e04db9a65a",
+      "source_table_len": 5,
+      "source_num_blocks": 8,
+      "source_optimizer_steps": 9999,
+      "input_mapping": [
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          4,
+          15
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          6,
+          17
+        ],
+        [
+          7,
+          18
+        ],
+        [
+          8,
+          20
+        ],
+        [
+          9,
+          21
+        ],
+        [
+          10,
+          22
+        ],
+        [
+          11,
+          23
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          13,
+          26
+        ],
+        [
+          14,
+          27
+        ],
+        [
+          15,
+          28
+        ],
+        [
+          16,
+          30
+        ],
+        [
+          17,
+          31
+        ],
+        [
+          18,
+          32
+        ],
+        [
+          19,
+          33
+        ],
+        [
+          20,
+          35
+        ],
+        [
+          21,
+          36
+        ],
+        [
+          22,
+          37
+        ],
+        [
+          23,
+          38
+        ],
+        [
+          24,
+          40
+        ],
+        [
+          25,
+          41
+        ],
+        [
+          26,
+          42
+        ],
+        [
+          27,
+          43
+        ],
+        [
+          28,
+          45
+        ],
+        [
+          29,
+          46
+        ],
+        [
+          30,
+          47
+        ],
+        [
+          31,
+          48
+        ],
+        [
+          32,
+          49
+        ],
+        [
+          33,
+          51
+        ],
+        [
+          34,
+          52
+        ],
+        [
+          35,
+          53
+        ],
+        [
+          36,
+          54
+        ]
+      ],
+      "new_connections": "zero",
+      "stack_alignment": "bottom",
+      "column_alignment": "left",
+      "copied_input_features": 37,
+      "new_input_features": 0,
+      "trainable_parameters": 23620,
+      "frozen_parameters": 0
+    },
+    "seed": 2505,
+    "torch": "2.14.0+cu130",
+    "gpu": "NVIDIA RTX PRO 4500 Blackwell Server Edition",
+    "algorithm": "structured-ddqn-per-n3-dqfd-lite",
+    "max_environment_steps": 100000,
+    "demonstration_steps_minimum": 8000,
+    "warm_updates": 500,
+    "learning_rate": 5e-05,
+    "epsilon_start": 0.1,
+    "epsilon_end": 0.02,
+    "epsilon_decay_steps": 20000,
+    "evaluation_interval": 2000,
+    "target_sync_updates": 500,
+    "max_actions_per_transfer": 32,
+    "legal_masked_training": true,
+    "selection": {
+      "seed_start": 9000000,
+      "singles": 100,
+      "sequences": 20,
+      "length": 10
+    },
+    "assessment": {
+      "seed_start": 10000000,
+      "singles": 1000,
+      "sequences": 100,
+      "length": 10
+    },
+    "early_stop": "Two consecutive perfect selection suites after at least 5000 environment steps",
+    "acceptance": "At least 99% singles, 99% requested transfers and 95% complete sequences",
+    "training_seed_start": 7000000,
+    "demonstration_seed_start": 8000000,
+    "evaluation_tasks_excluded": "All 2-4-BW seeds 23000 through 23049",
+    "resume": "Weights-only restart into a new directory; no exact replay/optimizer resume"
+  },
+  "result": {
+    "status": "completed",
+    "accepted": true,
+    "table_len": 4,
+    "num_blocks": 6,
+    "environment_steps": 6003,
+    "optimizer_steps": 6503,
+    "selected_optimizer_steps": 0,
+    "early_stopped": true,
+    "assessment": {
+      "single_successes": 1000,
+      "singles": 1000,
+      "sequence_successes": 100,
+      "sequences": 100,
+      "successful_transfers": 2000,
+      "requested_transfers": 2000,
+      "executed_transfers": 2000,
+      "actions": 9603
+    },
+    "checkpoint_sha256": "e564efce25c6b27e91c277774dec654a0e1a29525e5ad0e95f493a604b13bc47",
+    "elapsed_seconds": 57.273522778996266
+  },
+  "independent_replay": {
+    "valid": true,
+    "torch": "2.13.0+cu130",
+    "device": "cpu",
+    "numeric_and_symbolic": true,
+    "actions": 9603
+  },
+  "runtime_integration": "pending",
+  "source_commit": "b168e88",
+  "evidence_archive_sha256": "0ca924f81b97da56272991580ddede1e88ac49cc491f3bcdfb150e3c63e219de"
+}
